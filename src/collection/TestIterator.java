@@ -1,6 +1,6 @@
 package collection;
 
-import util.Employee;
+import common.Employee;
 
 import java.util.ArrayList;
 import java.util.Iterator;
