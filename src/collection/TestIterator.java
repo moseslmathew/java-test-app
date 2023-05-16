@@ -31,8 +31,6 @@ public class TestIterator {
         while (itr.hasNext())
         {
             Employee emp = (Employee) itr.next();
-            System.out.println(emp.getName());
-
         }
     }
 }
