@@ -3,7 +3,7 @@ package collection;
 import common.Employee;
 
 import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.ListIterator;
 
 public class TestIterator {
 
@@ -27,10 +27,8 @@ public class TestIterator {
         employeeList.add(E2);
         employeeList.add(E3);
         employeeList.add(E4);
-        Iterator itr= employeeList.iterator();
-        while (itr.hasNext())
-        {
-            Employee emp = (Employee) itr.next();
-        }
+
+        for(ListIterator<Employee> it=employeeList.listIterator(); it.hasNext();)
+            System.out.println((it.next()).getName());
     }
 }
