@@ -1,10 +1,9 @@
 package collection;
 
-import util.*;
+import common.*;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class TestArrayListPlus {
 
