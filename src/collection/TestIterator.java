@@ -12,6 +12,7 @@ public class TestIterator {
         Employee E2=new Employee();
         Employee E3=new Employee();
         Employee E4=new Employee();
+        Employee E5=new Employee();
 
         E1.setName("John");
         E1.setEmpID(111);
@@ -21,6 +22,8 @@ public class TestIterator {
         E3.setEmpID(333);
         E4.setName("Mathew");
         E4.setEmpID(444);
+        E5.setName("Kevin D");
+        E5.setEmpID(555);
 
         ArrayList<Employee> employeeList= new ArrayList<>();
         employeeList.add(E1);
@@ -28,7 +31,18 @@ public class TestIterator {
         employeeList.add(E3);
         employeeList.add(E4);
 
-        for(ListIterator<Employee> it=employeeList.listIterator(); it.hasNext();)
-            System.out.println((it.next()).getName());
+        for(ListIterator<Employee> it=employeeList.listIterator(); it.hasNext();) {
+            System.out.println(it.getClass().getName());
+            if(it.next().getName()=="Kevin") {
+                it.set(E5);
+                it.add(E1);
+            }
+
+        }
+
+        for (Employee employee : employeeList) {
+            System.out.println(employee.getName());
+        }
+
     }
 }
