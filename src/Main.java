@@ -1,12 +1,12 @@
 import basics.nestedClassTest;
+import basics.serilizableTest;
+
+import java.io.IOException;
 
 public class Main {
-    public static void main(String[] args) {
-        nestedClassTest obj=new nestedClassTest();
-        System.out.println(obj.getClass().getName());
-
-        nestedClassTest.subclass objsub= new nestedClassTest.subclass();
-        System.out.println(objsub.getClass().getName());
+    public static void main(String[] args) throws IOException {
+        serilizableTest obj=new serilizableTest();
+        obj.test();
     }
 
 

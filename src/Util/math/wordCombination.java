@@ -1,17 +1,18 @@
 package Util.math;
 
 public class wordCombination {
-    private String givenWords="Test";
+    private String givenWord ="Test";
 
-    public String getGivenWords() {
-        return givenWords;
+    public String getGivenWord() {
+        return givenWord;
     }
 
-    public void setGivenWords(String givenWords) {
-        this.givenWords = givenWords;
+    public void setGivenWord(String givenWord) {
+        this.givenWord = givenWord;
     }
 
     public void calc(){
+        int stringLength=givenWord.length();
 
 
     }
