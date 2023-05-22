@@ -2,19 +2,17 @@ package common;
 
 public class Manager extends Employee{
 
-    private int numberOfReportees;
+    private int numberOfReportee;
     private String projectName;
 
-    public int getNumberOfReportees(int i) {
-        return numberOfReportees;
+    public Manager(int empID, String name, int numberOfReportee, String projectName) {
+        super(empID, name);
+        this.numberOfReportee = numberOfReportee;
+        this.projectName = projectName;
     }
 
-    public String getProjectName() {
-        return projectName;
-    }
-
-    public void setNumberOfReportees(int numberOfReportees) {
-        this.numberOfReportees = numberOfReportees;
+    public void setNumberOfReportee(int numberOfReportee) {
+        this.numberOfReportee = numberOfReportee;
     }
 
     public void setProjectName(String projectName) {

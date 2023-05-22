@@ -2,25 +2,30 @@ package common;
 
 import java.io.Serializable;
 
-public class Employee implements Serializable {
+public class Employee implements Serializable, Comparable<Object> {
+
     private String name;
-    private int empID;
+    private int empId;
 
     public String getName() {
         return name;
     }
 
-    public int getEmpID() {
-        return empID;
+    public int getEmpId() {
+        return empId;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setEmpID(int empID) {
-        this.empID = empID;
+    public Employee(int empID, String name) {
+        this.empId=empID;
+        this.name=name;
     }
 
 
+    @Override
+    public int compareTo(Object o) {
+        int empId=this.empId;
+        Employee emp=(Employee) o;
+        return Integer.compare(emp.empId,empId);
+
+    }
 }

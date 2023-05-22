@@ -8,13 +8,9 @@ import java.io.ObjectOutputStream;
 public class serilizableTest {
 
     public void test() throws IOException {
-        Employee emp= new Employee();
-        emp.setEmpID(111);
-        emp.setName("George");
+        Employee emp= new Employee(111,"George");
 
-        Employee emp1= new Employee();
-        emp1.setEmpID(222);
-        emp1.setName("mat");
+        Employee emp1= new Employee(222,"mat");
 
         String data = "This is a line of text inside the file.";
         FileOutputStream flStream= new FileOutputStream("C:\\Users\\moses\\OneDrive\\Desktop\\Personal\\TestFileStream.txt");
