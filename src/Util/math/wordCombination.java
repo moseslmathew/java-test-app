@@ -62,7 +62,7 @@ public class wordCombination {
             char currentChar=str.charAt(i);
             System.out.print(currentChar);
             String newStr=str.substring(0,i)+str.substring((i+1));
-//            System.out.println(newStr);
+            System.out.println(newStr);
         }
 
     }
