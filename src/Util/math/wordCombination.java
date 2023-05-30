@@ -56,4 +56,21 @@ public class wordCombination {
        return ch2;
     }
 
+    public static void printWordCombinations(String str, String perm, int index){
+        for(int i=0;i<str.length();i++)
+        {
+            char currentChar=str.charAt(i);
+            System.out.print(currentChar);
+            String newStr=str.substring(0,i)+str.substring((i+1));
+            System.out.println(newStr);
+        }
+
+    }
+
+    public static String removeCharAtIndex(String str,int index){
+        StringBuilder strB=new StringBuilder(str);
+        strB.deleteCharAt(index);
+        return strB.toString();
+    }
+
 }
