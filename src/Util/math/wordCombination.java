@@ -53,7 +53,7 @@ public class wordCombination {
     }
 
     //tree structure explained in RecursiveTreeCombination.bmp
-    public static void printWordCombinations(String str,String currentPermResult,ArrayList<String> resultList) {
+    public static void printWordCombinations(String str,String currentPermResult,HashSet<String> resultList) {
 
         if(str.length()==0) {
             System.out.println("Result of the tree: " + currentPermResult);
