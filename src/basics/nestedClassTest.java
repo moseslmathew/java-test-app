@@ -1,24 +1,10 @@
 package basics;
 
+import java.io.IOException;
+
 public class nestedClassTest {
     private int id;
     private String name;
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
 
     public void mainClassMethod() {
         System.out.println("In Main Class");
@@ -31,13 +17,21 @@ public class nestedClassTest {
         }
     }
 
-
+    //nonstatic subclass
     public class subclass {
         public void subclassMethod() {
             System.out.println("In subclass");
-
         }
     }
 
+    public static void main(String[] args) {
+        nestedClassTest obj=new nestedClassTest();
+        obj.mainClassMethod();
 
+        nestedClassTest.subclass obj2= obj.new subclass();
+        obj2.subclassMethod();
+
+        nestedClassTest.staticSubclass obj3= new nestedClassTest.staticSubclass();
+        obj3.staticSubclassMethod();
+    }
 }
