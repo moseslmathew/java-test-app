@@ -1,12 +1,18 @@
-import Util.math.wordCombination;
+import basics.nestedClassTest;
+
 import java.io.IOException;
-import java.util.HashSet;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        HashSet<String> combinationList=new HashSet<>();
-        wordCombination.printWordCombinations("IIJS","",combinationList);
-        System.out.println("Result:"+combinationList);
+        nestedClassTest obj=new nestedClassTest();
+        obj.mainClassMethod();
+
+        nestedClassTest.subclass obj2= obj.new subclass();
+        obj2.subclassMethod();
+
+        nestedClassTest.staticSubclass obj3= new nestedClassTest.staticSubclass();
+        obj3.staticSubclassMethod();
+
     }
 
 
