@@ -1,8 +1,6 @@
 package basics;
 
-import java.io.IOException;
-
-public class nestedClassTest {
+public class NestedClassTest {
     private int id;
     private String name;
 
@@ -25,13 +23,13 @@ public class nestedClassTest {
     }
 
     public static void main(String[] args) {
-        nestedClassTest obj=new nestedClassTest();
+        NestedClassTest obj=new NestedClassTest();
         obj.mainClassMethod();
 
-        nestedClassTest.subclass obj2= obj.new subclass();
+        NestedClassTest.subclass obj2= obj.new subclass();
         obj2.subclassMethod();
 
-        nestedClassTest.staticSubclass obj3= new nestedClassTest.staticSubclass();
+        NestedClassTest.staticSubclass obj3= new NestedClassTest.staticSubclass();
         obj3.staticSubclassMethod();
     }
 }

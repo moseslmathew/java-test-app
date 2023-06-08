@@ -3,9 +3,8 @@ package basics;
 import common.Employee;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.ObjectOutputStream;
 
-public class serilizableTest {
+public class SerilizableTest {
 
     public void test() throws IOException {
         Employee emp= new Employee(111,"George");
