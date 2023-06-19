@@ -16,9 +16,12 @@ public class TestStreams {
         System.out.println(numbers.stream().filter(item->item%2==0).count());
 
         //Sorting
+        System.out.println("<------------Sorting------------->");
         System.out.println(numbers.stream().sorted().collect(Collectors.toList()));
-        System.out.println(numbers.stream().sorted(testCompare).collect(Collectors.toList()));
         System.out.println(numbers.stream().sorted(new myComparator()).collect(Collectors.toList()));
+        System.out.println(numbers.stream().sorted(testCompare).collect(Collectors.toList()));
+        System.out.println(numbers.stream().sorted((o1, o2) -> Integer.compare(o2, o1)).collect(Collectors.toList()));
+
 
 
     }

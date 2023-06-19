@@ -2,7 +2,7 @@ package collection;
 
 import java.util.*;
 
-public class TestComparatorAndComparable {
+public class TestComparator {
     private final String givenWord = "Testt";
 
     public void calc() {
@@ -13,17 +13,18 @@ public class TestComparatorAndComparable {
         System.out.println("Word Set: " + givenWordSet);
         System.out.println("Word Sorted set: " + givenWordSortedSet);
 
-        //Custom sorting order by implementing compare method in myComparator class
-        TreeSet<String> givenWordSortedSet2 = new TreeSet<>(new myComparator());
+
+        TreeSet<String> givenWordSortedSet2 = new TreeSet<>(myComparator);
         givenWordSortedSet2.addAll(givenWordList);
         System.out.println("Word with custom Sorted set: " + givenWordSortedSet2);
     }
 
-    public static class myComparator implements Comparator<String> {
-        @Override
-        public int compare(String o1, String o2) {
-            return Integer.compare(o2.hashCode(), o1.hashCode());
-        }
+    //Custom sorting order by implementing compare method in Comparator interface (functional interface)
+    Comparator<String> myComparator =(o1,o2)-> Integer.compare(o2.hashCode(), o1.hashCode());
+
+    public static void main(String[] args){
+        TestComparator obj=new TestComparator();
+        obj.calc();
     }
 
 }

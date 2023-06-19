@@ -1,8 +1,12 @@
 package common;
 
+import lombok.Getter;
+
 import java.io.Serializable;
 import java.util.Objects;
 
+
+@Getter
 public class Employee implements Serializable, Comparable<Object> {
 
     private String name;

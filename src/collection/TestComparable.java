@@ -4,7 +4,7 @@ import common.Employee;
 
 import java.util.*;
 
-public class TestComparatorAndComparable2 {
+public class TestComparable {
 
     public void calc() {
         Employee E1 = new Employee(111, "John");
